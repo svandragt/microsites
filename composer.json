@@ -1,0 +1,20 @@
+{
+    "name": "svandragt/microsites",
+    "description": "Sites don't have to be complicated",
+    "type": "project",
+    "require": {
+        "league/commonmark": "^2.0"
+    },
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Svandragt\\Microsites\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sander van Dragt",
+            "email": "sander@vandragt.com"
+        }
+    ]
+}

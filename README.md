@@ -1,5 +1,5 @@
 # Microsites 
-The antidote to complexity.
+The antidote to complexity. Minimal CTA text only microsites.
 
 * View at [microsites.vandragt.com](https://microsites.vandragt.com)
 

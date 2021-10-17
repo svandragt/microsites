@@ -7,8 +7,7 @@
 
 <body>
 <div style='border:1px solid black'>
-<?= $this->contents ?>
-
+	<?= $this->contents ?>
 </div>
 
 </body>

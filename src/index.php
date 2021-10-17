@@ -19,7 +19,7 @@ if (!realpath($filename)) {
 		'contents' => (new CommonMarkConverter(
 			[
 				'html_input' => 'strip',
-    			'allow_unsafe_links' => false,
+    				'allow_unsafe_links' => false,
 			]))->convertToHtml(
 			file_get_contents($filename)
 		),

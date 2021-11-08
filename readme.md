@@ -1,3 +1,0 @@
-# Microsites
-
-All good.

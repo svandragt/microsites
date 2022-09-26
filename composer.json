@@ -16,5 +16,8 @@
             "name": "Sander van Dragt",
             "email": "sander@vandragt.com"
         }
-    ]
+    ],
+    "scripts": {
+        "serve": "php -S localhost:8888 -t src"
+    }
 }

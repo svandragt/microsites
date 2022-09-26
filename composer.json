@@ -3,7 +3,8 @@
     "description": "Sites don't have to be complicated",
     "type": "project",
     "require": {
-        "league/commonmark": "^2.0"
+        "league/commonmark": "^2.3",
+        "symfony/yaml": "^5.4"
     },
     "license": "GPL",
     "autoload": {

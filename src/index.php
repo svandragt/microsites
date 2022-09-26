@@ -3,7 +3,11 @@ namespace Svandragt\Microsites;
 
 require '../vendor/autoload.php';
 
-use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
+use League\CommonMark\Extension\FrontMatter\FrontMatterExtension;
+use League\CommonMark\MarkdownConverter;
 
 $filename = '../content' .  ($_SERVER['PATH_INFO'] ?? '/index') . '.md';
 
@@ -13,16 +17,21 @@ if (!realpath($filename)) {
 	die($header);
 }
 
+function md($filename) {
+	$env = new Environment();
+	$env->addExtension(new CommonMarkCoreExtension());
+	$env->addExtension(new FrontMatterExtension());
+	$env->addExtension(new SmartPunctExtension());
+	$conv =  new MarkdownConverter($env);
+	return $conv->convert(file_get_contents($filename));
+}
+
+$c = md($filename);
+$data = array_merge([
+		'contents' => $c ,
+	], $c->getFrontMatter());
+
 (new Template(
     'layout.php',
-	[
-		'contents' => (new CommonMarkConverter(
-			[
-				'html_input' => 'strip',
-    				'allow_unsafe_links' => false,
-			]))->convertToHtml(
-			file_get_contents($filename)
-		),
-		'title' => 'this is a test',
-	]
+	$data
 ))->render();

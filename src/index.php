@@ -3,11 +3,12 @@ namespace Svandragt\Microsites;
 
 require '../vendor/autoload.php';
 
-$filename = '../content' .  ($_SERVER['PATH_INFO'] ?? '/index') . '.md';
+$filename = '../content' .  (empty($_SERVER['PATH_INFO']) ? '/index' : $_SERVER['PATH_INFO']) . '.md';
 
 if (!realpath($filename)) {
 	$header = "HTTP/1.0 404 Not Found";
 	header($header);
+	var_dump($_SERVER);
 	die($header);
 }
 

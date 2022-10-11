@@ -3,8 +3,7 @@
     "description": "Sites don't have to be complicated",
     "type": "project",
     "require": {
-        "league/commonmark": "^2.3",
-        "symfony/yaml": "^5.4"
+        "erusev/parsedown": "^1.7"
     },
     "license": "GPL",
     "autoload": {
@@ -12,13 +11,12 @@
             "Svandragt\\Microsites\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Sander van Dragt",
-            "email": "sander@vandragt.com"
-        }
-    ],
+    "authors": [{
+        "name": "Sander van Dragt",
+        "email": "sander@vandragt.com"
+    }],
     "scripts": {
-        "serve": "php -S localhost:8888 -t src"
+        "serve": "php -S localhost:8888 -t src",
+        "build": "box compile"
     }
 }

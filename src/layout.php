@@ -12,6 +12,15 @@
 			padding: 0 2em;
 			max-width:  70ch;
 		}
+
+		h1,h2,h3 {
+			font-weight: normal;
+		}
+
+		h1 {
+			border-top:  2px solid black;
+			padding-top: 1em;
+		}
 	</style>
 </head>
 <body>

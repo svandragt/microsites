@@ -1,5 +1,6 @@
 ---
-title: Hello Worldly World
+title =  Hello Worldly World
+tags = one,two
 ---
 
 # Hello, World

@@ -16,7 +16,6 @@
         "email": "sander@vandragt.com"
     }],
     "scripts": {
-        "serve": "php -S localhost:8888 -t src",
-        "build": "box compile"
+        "serve": "php -S localhost:8888 -t src"
     }
 }
